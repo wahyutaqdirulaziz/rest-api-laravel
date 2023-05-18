@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "6757d944-91bc-4f92-bc4f-47c511fc08fa",
+		"name": "torin.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9919738"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "wahyu ",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "aziz",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "wahyudipe6@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wahyu@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "wahyu@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_url}}/register",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wahyudipe6@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wahyu@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_url}}/login",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organisasi",
+			"item": [
+				{
+					"name": "organisasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_url}}/organizer?per_page=4&page=1",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"organizer"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "4"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organisasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "organizerName",
+									"value": "Lombok Traveling",
+									"type": "text"
+								},
+								{
+									"key": "imageLocation",
+									"value": "www.lombok.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_url}}/organizer",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"organizer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organisaiById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "organizerName",
+									"value": "Lombok Traveling",
+									"type": "text"
+								},
+								{
+									"key": "imageLocation",
+									"value": "www.lombok.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_url}}/organizer/1",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"organizer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organisasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Base_url}}/organizer/1",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"organizer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organisasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base_url}}/organizer/1",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"organizer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_url}}/users?page=1&per_page=10",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "alim",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "arif",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alim@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wahyu12345",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "wahyu12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_url}}/users",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_url}}/users/2",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "wahyu",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "tess",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "okeee@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_url}}/users/2",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|AuH594b4coeAaLRoBuR3MeLjJyWuaio8JGNJwEE1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base_url}}/users/2",
+							"host": [
+								"{{Base_url}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:8000/api/"
+		},
+		{
+			"key": "Base_url",
+			"value": "http://127.0.0.1:8000/api"
+		}
+	]
+}
